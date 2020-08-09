@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{ 
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: hsl(229, 57%, 11%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fcontainer{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 20em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; 
+}
+.fylo{
+    background-color: hsl(228, 56%, 26%);
+    width: 20em;
+    height: 14em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 0.75em 7em 0.75em 0.75em;
+}
+.logo-contain{
+    margin-bottom: 1em;
+    margin-left: 2em;
+}
+.icons-content{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2em;
+}
+.icons-content>img{
+    padding: 0.75em;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 0.5em;
+    margin-right: 1em;
+    object-fit: contain;
+}
+.icon-cursor{
+    cursor: pointer;
+}
+.capacity-used{
+    background-color: hsl(228, 56%, 26%);
+    width: 100%;
+    height: 10em;
+    border-radius: 0.75em 0.75em 0.75em 0.75em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.space-used{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: hsl(229, 7%, 55%);
+    font-weight: 500;
+}
+.space-used>span{
+    font-weight: 700;
+    color: #ffffff;
+
+}
+.contain-prograssAll{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bar-containt{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.value-storage{
+    position: absolute;
+    top: 2.1em;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+.zero-storage{
+    left: 0;
+}
+.hundred-storage{
+    right:0;
+}
+.bar-capacity{
+    width: 100%;
+    background-color: hsla(229, 57%, 11%, 0.402);
+    border-width: 3px;
+    height: 1.4em;
+    color: hsl(228, 56%, 26%);
+    border-radius: 1em;
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.bar-progess{
+    background: linear-gradient(90deg, hsl(6, 100%, 80%) 0%, hsl(335, 100%, 65%) 100%);   
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-color: hsl(229, 57%, 11%);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 1em;
+}
+.marker-progress{
+    background-color: #ffffff;
+    width: .9em;
+    height: .9em;
+    border-radius: 1em;
+}
+.leftSpace-contain{
+    position: relative;
+    top: -190px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.left-capacity{
+    background-color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: hsl(229, 7%, 55%);
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 0.5em;
+    position: absolute;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+.left-capacity>span{
+    font-size: 38px;
+    color: black;
+    font-weight: 700;
+    margin-right: 8px;
+}
+@media screen and (min-width:320px){
+    body{
+        background-image: url("images/bg-mobile.png");   
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    .fylo{   
+        margin-bottom: 1em;
+    }
+    .contain-prograssAll{
+        justify-content: space-between;
+    }
+    .left-capacity{
+        background-color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 15px;
+        color: hsl(229, 7%, 55%);
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 0.5em;
+        position: absolute;
+        top: 190px;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (min-width:928px){
+    body{
+        background-image: url("images/bg-desktop.png");
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .fcontainer{
+        flex-direction: row;
+        width: 58em;
+        justify-content: center;
+        align-content:flex-end;
+    }
+    .fylo{ 
+        min-width: 20em;
+        margin-bottom: 0;
+        margin-right: 2em;
+    }
+    .contain-prograssAll{
+        align-items: flex-start;
+    }
+    .left-capacity{
+        right: 2em;
+        border-bottom-right-radius: 0;
+        top:1.8em;
+    }
+    .left-capacity::after{
+        content: "";
+        position: absolute;
+        border-left: 25px solid transparent;
+        border-right: 25px solid #ffffff;
+        border-top: 25px solid transparent; 
+        top: 80px;
+        right: -13.1px;
+        bottom:4.8em;
+        transform: rotate(270deg);
+    }
+}
